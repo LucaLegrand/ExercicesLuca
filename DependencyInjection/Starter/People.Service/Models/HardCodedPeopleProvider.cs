@@ -29,6 +29,8 @@ namespace People.Service.Models
                     StartDate = new DateTime(2000, 11, 1), Rating=5 },
                 new Person() { Id=9, GivenName="Isaac", FamilyName="Gampu",
                     StartDate = new DateTime(1977, 9, 10), Rating=4 },
+                new Person() { Id=10, GivenName="Luca", FamilyName="Legrand",
+                    StartDate = new DateTime(2002, 9, 10), Rating=9 },
             };
             return p;
         }

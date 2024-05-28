@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29324.140
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Common", "Common\Common.csproj", "{3996215C-17B6-446A-8CB9-0EE5FDB607A4}"
 EndProject
@@ -29,6 +29,14 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01-View", "01-View", "{B48397A0-B142-46DC-83B3-CDD64EA70885}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PeopleViewer.View", "PeopleViewer.View\PeopleViewer.View.csproj", "{3B61E5D8-EB93-41BB-8E94-27BE47D7CF5E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonReader.CSV", "PersonReader.CSV\PersonReader.CSV.csproj", "{7A5F53F1-7A93-492D-8B90-0B0FE3BDD685}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonReader.Caching", "PersonReader.Caching\PersonReader.Caching.csproj", "{2C10E0B1-E915-45F6-AD16-DDA1544CD64D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PeopleViewer.Presentation.Tests", "PeopleViewer.Presentation.Tests\PeopleViewer.Presentation.Tests.csproj", "{814E63F2-54B2-4F23-94F1-5CE4C107ABC6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PersonReader.CSV.Tests", "PersonReader.CSV.Tests\PersonReader.CSV.Tests.csproj", "{26575A46-65F3-404D-9E23-A146D1EA6594}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -60,6 +68,22 @@ Global
 		{3B61E5D8-EB93-41BB-8E94-27BE47D7CF5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B61E5D8-EB93-41BB-8E94-27BE47D7CF5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B61E5D8-EB93-41BB-8E94-27BE47D7CF5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A5F53F1-7A93-492D-8B90-0B0FE3BDD685}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A5F53F1-7A93-492D-8B90-0B0FE3BDD685}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A5F53F1-7A93-492D-8B90-0B0FE3BDD685}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A5F53F1-7A93-492D-8B90-0B0FE3BDD685}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C10E0B1-E915-45F6-AD16-DDA1544CD64D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C10E0B1-E915-45F6-AD16-DDA1544CD64D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C10E0B1-E915-45F6-AD16-DDA1544CD64D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C10E0B1-E915-45F6-AD16-DDA1544CD64D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{814E63F2-54B2-4F23-94F1-5CE4C107ABC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{814E63F2-54B2-4F23-94F1-5CE4C107ABC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{814E63F2-54B2-4F23-94F1-5CE4C107ABC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{814E63F2-54B2-4F23-94F1-5CE4C107ABC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26575A46-65F3-404D-9E23-A146D1EA6594}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26575A46-65F3-404D-9E23-A146D1EA6594}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26575A46-65F3-404D-9E23-A146D1EA6594}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26575A46-65F3-404D-9E23-A146D1EA6594}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -71,6 +95,10 @@ Global
 		{C5C0C88B-1FF4-478D-B2A4-ECAAE141D7E0} = {02571869-22F1-42D3-B655-B5358E09B793}
 		{D11C3312-3060-4327-9EDA-50863862A098} = {2E32AC25-4B53-4BCD-902A-1EE9141B4A82}
 		{3B61E5D8-EB93-41BB-8E94-27BE47D7CF5E} = {B48397A0-B142-46DC-83B3-CDD64EA70885}
+		{7A5F53F1-7A93-492D-8B90-0B0FE3BDD685} = {3A094FBC-A45F-4BFC-AAFD-D1FC6CA20461}
+		{2C10E0B1-E915-45F6-AD16-DDA1544CD64D} = {3A094FBC-A45F-4BFC-AAFD-D1FC6CA20461}
+		{814E63F2-54B2-4F23-94F1-5CE4C107ABC6} = {B48397A0-B142-46DC-83B3-CDD64EA70885}
+		{26575A46-65F3-404D-9E23-A146D1EA6594} = {3A094FBC-A45F-4BFC-AAFD-D1FC6CA20461}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E1E2258C-B32C-438F-9055-8CF1C9595116}

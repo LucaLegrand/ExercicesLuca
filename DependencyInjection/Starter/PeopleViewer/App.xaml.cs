@@ -1,9 +1,17 @@
-﻿using System.Windows;
+﻿using PeopleViewer.Presentation;
+using PersonReader.Service;
+using PersonReader.CSV;
+using System.Reflection.PortableExecutable;
+using PersonReader.Caching;
+using System.Windows;
+using Ninject;
 
 namespace PeopleViewer
 {
     public partial class App : Application
     {
+        IKernel Container = new StandardKernel();
+
         protected override void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
@@ -13,7 +21,14 @@ namespace PeopleViewer
 
         private void ComposeObject()
         {
-            Application.Current.MainWindow = new MainWindow();
+            Container.Bind<IRepository>().To<CSVReader>().InSingletonScope();
+            Application.Current.MainWindow = Container.Get<MainWindow>();
+
+            //IRepository Reader = new ServiceReader();
+            //IRepository repocaching = new CachingReader(Reader);
+            //PeopleViewModel ViewModel = new PeopleViewModel(repocaching);
+            //Application.Current.MainWindow = new MainWindow(ViewModel);
+
             // TODO 3 : C'est désormais l'application qui va créer et choisir le repository  ainsi que le Viewmodel
             // TODO 3-1 : Créer le repository (i.e. instancier ServiceReader)
             // TODO 3-2 : Créer le view model (PeopleViewModel)
@@ -31,6 +46,7 @@ namespace PeopleViewer
             // TODO 8-6 : Changer le binding du container pour fournir un CSVReader à la place du ServiceReader
             // TODO 8-7 : Configurer le binding pour qu'il utilise "InSingletonScope" (C.F. https://github.com/ninject/Ninject/wiki/Object-Scopes)
             // TODO 8-8 : Vérifier que l'application fonctionne toujours correctement et qu'elle utilise le fichier csv
+
         }
     }
 }

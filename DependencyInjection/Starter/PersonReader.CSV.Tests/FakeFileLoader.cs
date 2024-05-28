@@ -3,7 +3,7 @@
 namespace PersonReader.CSV.Tests
 {
     // TODO 7-2 :  Faire en sorte que la classe FakeFileLoader implémente l'interface ICSVFileLoader
-    public class FakeFileLoader
+    public class FakeFileLoader : ICSVFileLoader
     {
         private string dataType;
 
